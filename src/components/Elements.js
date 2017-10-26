@@ -1,7 +1,6 @@
 import React from "react";
 import Element from './Element';
 
-
 class Elements extends React.Component {
     render() {
         return ( 
@@ -17,6 +16,7 @@ class Elements extends React.Component {
                             category={element.category} 
                             xpos={element.xpos}
                             ypos={element.ypos}
+                            handleModal={this.props.handleModal}
                         />
                     )
                 })
