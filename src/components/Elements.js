@@ -1,6 +1,6 @@
 import React from "react";
 import Element from './Element';
-
+import Axios from 'axios'
 const elements = 
     {
         "name": "Hydrogen", 
