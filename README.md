@@ -10,10 +10,15 @@ A Periodic table made with React JS and Webpack.
 ### Features
 
 ### Dependencies
-    React JS
-    React DOM
+    ReactJS
+    ReactDOM
 
-#### Summary
+#### Technologies
+    HTML5
+    CSS3
+    JavaScript
+    Yarn
+    Webpack
 
 
 ### Contact Information
