@@ -1,13 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PeriodicTable from './components/PeriodicTable';
-import getData from './services/elements';
-
-// getData().then( (d) => {
-//     data = d
-// })
-
-
+import 'normalize.css/normalize.css';
+import './styles/styles.scss';
 
 const appRoot = document.getElementById('app');
 ReactDOM.render( <PeriodicTable />, appRoot );
