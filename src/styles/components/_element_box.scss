@@ -1,0 +1,63 @@
+.element__info__box {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    left: 170px;
+    top: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: $c-dark-blue;
+    &.diatomic_nonmetal,
+    &.polyatomic_nonmetal {
+        background: $c-nonmetal;
+    }
+    &.alkali_metal {
+        background: $c-alkali-metals;
+    }
+    &.transition_metal {
+        background: $c-transition-metal;
+    }
+    &.actinide {
+        background: $c-acthinoids;
+    }
+    &.alkaline_earth_metal {
+        background: $c-alkali-earth-metals;
+    }
+    &.lanthanide {
+        background: $c-lathanoids;
+    }
+    &.metalloid {
+        background: $c-metaloids;
+    }
+    &.post_transition_metal {
+        background: $c-post-transition-metal;
+    }
+    &.noble_gas {
+        background: $c-noble-gases;
+    }
+    &[class*="unknown"] {
+        background: $c-unknown;
+        color: $c-dark-blue;
+    }
+}
+
+.element__info__box__title {
+    font-size: 10rem;
+    margin: 0;
+}
+
+.element__info__box__number {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    font-size: 2rem;
+}
+
+.element__info__box__mass {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.element__info__box__name {
+    margin: 0;
+}

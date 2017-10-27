@@ -4,10 +4,11 @@ import Element from './Element';
 class Elements extends React.Component {
     render() {
         return ( 
-            <div>
+            <div className="elements">
             { this.props.elements.map((element) => {
                 return (
                         <Element
+                            handleHover={this.props.handleHover}
                             key={element.number}
                             atomic_number={element.number} 
                             symbol={element.symbol} 

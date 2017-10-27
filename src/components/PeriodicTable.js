@@ -6,15 +6,17 @@ import TemperatureSlider from './TemperatureSlider';
 import ElementInfoBox from './ElementInfoBox';
 import ElementCategoryBox from './ElementCategoryBox';
 import ElementTypeBox from './ElementTypeBox';
+import Header from './Header'
 
 class PeriodicTable extends React.Component {
     state = {
         elements: [],
         types: [],
-        categories: []
+        categories: [],
+        hoveredData: {}
     };
 
-    handleModal() {
+    handleModal = () => {
         console.log("open modal");
     }
 
@@ -37,19 +39,28 @@ class PeriodicTable extends React.Component {
         })
     }
 
+    handleHover = (data) => {
+        this.setState( () => ({
+            hoveredData: data
+        }))
+    }
+
     render() {
         return ( 
-            <div>
-                PeriodicTable 
-                <ElementInfoBox />
-                <ElementCategoryBox />
-                <ElementTypeBox types={this.state.types}/>
-                <TemperatureSlider />
+            <div className="periodic__table">
+                <Header />
                 <Elements 
+                    handleHover={this.handleHover}
                     elements={this.state.elements}
                     handleModal={this.handleModal}
                 />
-                <ElementModal />
+                <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
+                 {
+                    // <ElementCategoryBox />
+                    // <ElementTypeBox types={this.state.types}/>
+                    // <TemperatureSlider />
+                    //<ElementModal />
+                }
             </div>
         );
     }

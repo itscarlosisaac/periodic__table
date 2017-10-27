@@ -1,2 +1,8 @@
+// Base Styles
+@import './base/settings';
+@import './base/base';
 
-@import './base/_base.scss'
+// Components 
+@import './components/element';
+@import './components/element_box';
+@import './components/_periodic_table'
