@@ -55,9 +55,9 @@ class PeriodicTable extends React.Component {
                     handleModal={this.handleModal}
                 />
                 <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
+                <ElementTypeBox types={this.state.types}/>
                  {
-                    // <ElementCategoryBox />
-                    // <ElementTypeBox types={this.state.types}/>
+                    //<ElementCategoryBox categories={this.state.categories} />    
                     // <TemperatureSlider />
                     //<ElementModal />
                 }

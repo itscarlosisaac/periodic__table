@@ -15,6 +15,7 @@
     padding: .3rem;
     transition: all 200ms ease-in-out;
     width: 72px;
+    &[class*="unknown"]:hover,
     &:hover{  
         color:$c-dark-blue; 
         transform: scale(1.3);
@@ -114,7 +115,7 @@
     }
 }
 
-div[class*="unknown"] {
+.element[class*="unknown"] {
     color: $c-unknown ;
     &:hover{
         background: $c-unknown;

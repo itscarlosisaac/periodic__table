@@ -5,6 +5,7 @@ class ElementCategoryBox extends React.Component{
         return(
             <div>
                 ElementCategoryBox.js
+                {this.props.categories}
             </div>
         )
     }
