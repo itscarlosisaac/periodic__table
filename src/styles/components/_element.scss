@@ -19,7 +19,7 @@
     width: 72px;
     &[class*="unknown"]:hover,
     &:hover{  
-        color:$c-dark-blue; 
+        color:$c-dark-blue !important; 
         transform: scale(1.3);
         z-index: 10;
         border-color:transparent;
@@ -53,64 +53,64 @@
     margin: 0;
 }
 
-.diatomic_nonmetal,
-.polyatomic_nonmetal {
+.element.diatomic_nonmetal,
+.element.polyatomic_nonmetal {
     color: $c-nonmetal;
     &:hover{
         background: $c-nonmetal;
     }
 }
 
-.alkali_metal {
+.element.alkali_metal {
     color: $c-alkali-metals;
     &:hover{
         background: $c-alkali-metals;
     }
 }
 
-.transition_metal {
+.element.transition_metal {
     color: $c-transition-metal;
     &:hover{
         background: $c-transition-metal;
     }
 }
 
-.actinide {
+.element.actinide {
     color: $c-acthinoids;
     &:hover{
         background: $c-acthinoids;
     }
 }
 
-.alkaline_earth_metal {
+.element.alkaline_earth_metal {
     color: $c-alkali-earth-metals;
     &:hover{
         background: $c-alkali-earth-metals;
     }
 }
 
-.lanthanide {
+.element.lanthanide {
     color: $c-lathanoids;
     &:hover{
         background: $c-lathanoids;
     }
 }
 
-.metalloid {
+.element.metalloid {
     color: $c-metaloids;
     &:hover{
         background: $c-metaloids;
     }
 }
 
-.post_transition_metal {
+.element.post_transition_metal {
     color: $c-post-transition-metal;
     &:hover{
         background: $c-post-transition-metal;
     }
 }
 
-.noble_gas {
+.element.noble_gas {
     color: $c-noble-gases;
     &:hover{
         background: $c-noble-gases;

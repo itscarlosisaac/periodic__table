@@ -48,7 +48,6 @@ class PeriodicTable extends React.Component {
     render() {
         return ( 
             <div className="periodic__table">
-                <Header />
                 <Elements 
                     handleHover={this.handleHover}
                     elements={this.state.elements}
@@ -57,10 +56,8 @@ class PeriodicTable extends React.Component {
                 <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
                 <ElementTypeBox types={this.state.types}/>
                 <ElementCategoryBox categories={this.state.categories} />    
-                 {
-                    // <TemperatureSlider />
-                    //<ElementModal />
-                }
+                <TemperatureSlider />
+                { /* <ElementModal />  <Header />*/}
             </div>
         );
     }
