@@ -1,10 +1,14 @@
 import React from "react";
 import Element from './Element';
+import HRules from './HRules';
+import VRules from './VRules';
 
 class Elements extends React.Component {
     render() {
         return ( 
             <div className="elements">
+            <HRules />
+            <VRules />
             { this.props.elements.map((element) => {
                 return (
                         <Element

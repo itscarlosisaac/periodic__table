@@ -28,15 +28,15 @@
         height: 30px;
     }
     &.gas {
-        span{border: 2px solid #883434;}
+        span{border: 3px solid #883434;}
     }
     &.liquid {
-        span{border: 2px solid #44C0FF;}
+        span{border: 3px solid #44C0FF;}
     }
     &.solid {
-        span{border: 2px solid #556672;}
+        span{border: 3px solid #556672;}
     }
     &.unknown {
-        span{border: 2px solid #44C0FF;}
+        span{border: 3px solid #44C0FF;}
     }
 }

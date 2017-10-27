@@ -1,0 +1,57 @@
+.h__rule{
+    position: absolute;
+    left:-60px;
+    top:0;
+    height: 100%;
+    width: 72px;
+    z-index: 1;
+}
+
+.h__rule__line{
+    border-top:1px solid rgba(255, 255, 255, 0.05);
+    width: 60px;
+    height: 72px; 
+    line-height: 72px;
+    box-sizing: border-box;
+    &:last-child{
+        border-bottom:1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.h__rule__num{
+    left: 20px;
+    position: relative;
+    color:white;
+}
+
+
+// Vertical Rules
+
+.v__rule{
+    position: absolute;
+    top:-60px;
+    left:0;
+    width: 100%;
+    height: 72px;
+    z-index: 1;
+    display: flex;
+}
+
+
+.v__rule__line{
+    border-left:1px solid rgba(255, 255, 255, 0.05);
+    width: 72px;
+    height: 60px; 
+    line-height: 72px;
+    text-align: center;
+    box-sizing: border-box;
+    &:last-child{
+        border-right:1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.v__rule__num{
+    top: -10px;
+    position: relative;
+    color:white;
+}
