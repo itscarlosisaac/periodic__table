@@ -23,6 +23,7 @@ class Element extends React.Component{
                 className={`element ${this.props.category.replace(/-| /g, '_') }` }
                 onClick={this.props.handleModal}
                 onMouseOver={this.handleHover}
+                data-boil={this.props.boilingPoint}
             >
                 <span className="element__number">{this.props.atomic_number}</span>
                 <h1 className="element__title">{this.props.symbol}</h1>

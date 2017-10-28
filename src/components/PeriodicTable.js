@@ -13,7 +13,8 @@ class PeriodicTable extends React.Component {
         elements: [],
         types: [],
         categories: [],
-        hoveredData: {}
+        hoveredData: {},
+        boilingPoint: {}
     };
 
     handleModal = () => {
@@ -40,9 +41,20 @@ class PeriodicTable extends React.Component {
     }
 
     handleHover = (data) => {
-        this.setState( () => ({
-            hoveredData: data
-        }))
+        this.setState( () => ({ hoveredData: data }) );
+    }
+
+    handleBoilingPoint = (e) => {
+        this.setState( () => ({boilingPoint:e}) );
+        const elements = document.querySelectorAll('[data-boil]');
+    
+        elements.forEach( (e) => {
+            if(this.state.boilingPoint.kelvin > e.dataset.boil){
+                e.classList.add('solid')
+            }else{
+                e.classList.remove('solid');
+            }
+        })
     }
 
     render() {
@@ -56,8 +68,8 @@ class PeriodicTable extends React.Component {
                 <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
                 <ElementTypeBox types={this.state.types}/>
                 <ElementCategoryBox categories={this.state.categories} />    
-                <TemperatureSlider />
-                { /* <ElementModal />  <Header />*/}
+                <TemperatureSlider handleBoilingPoint={this.handleBoilingPoint} />
+                { /* <ElementModal />  <Header /> */ }
             </div>
         );
     }

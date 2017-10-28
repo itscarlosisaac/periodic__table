@@ -22,6 +22,7 @@ class Elements extends React.Component {
                             xpos={element.xpos}
                             ypos={element.ypos}
                             handleModal={this.props.handleModal}
+                            boilingPoint={element.boil}
                         />
                     )
                 })
