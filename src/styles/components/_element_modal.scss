@@ -1,0 +1,20 @@
+
+
+.ReactModalPortal{
+    z-index: 1000000;
+    position: relative;
+}
+
+.ReactModal__Overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element__modal{
+    z-index: 99999;
+    max-width: 400px;
+    max-height: 200px;
+    background: $c-dark-blue;
+    color:#fff;
+}

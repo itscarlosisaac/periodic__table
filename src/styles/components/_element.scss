@@ -28,6 +28,7 @@
         background: #8B3230 !important;
         color:$c-dark-blue !important;
     }
+    *{ pointer-events: none; }
 }
 
 .element__title {

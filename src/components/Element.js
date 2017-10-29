@@ -24,6 +24,7 @@ class Element extends React.Component{
                 onClick={this.props.handleModal}
                 onMouseOver={this.handleHover}
                 data-boil={this.props.boilingPoint}
+                data-symbol={this.props.symbol}
             >
                 <span className="element__number">{this.props.atomic_number}</span>
                 <h1 className="element__title">{this.props.symbol}</h1>

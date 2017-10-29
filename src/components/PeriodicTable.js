@@ -14,11 +14,22 @@ class PeriodicTable extends React.Component {
         types: [],
         categories: [],
         hoveredData: {},
-        boilingPoint: {}
+        boilingPoint: {},
+        isOpen: false,
+        modalData: {}
     };
 
-    handleModal = () => {
-        console.log("open modal");
+    handleModal = (e) => {
+        const symbol = e.target.dataset.symbol;
+        const data = this.state.elements.filter( (element) => {
+            return element.symbol == symbol
+        });
+
+        this.setState( () => ({ isOpen: true, modalData: data[0] }) );
+    }
+
+    handleCloseModal = () => {
+        this.setState( () => ({ isOpen: false }) );
     }
 
     componentDidMount () {
@@ -69,7 +80,8 @@ class PeriodicTable extends React.Component {
                 <ElementTypeBox types={this.state.types}/>
                 <ElementCategoryBox categories={this.state.categories} />    
                 <TemperatureSlider handleBoilingPoint={this.handleBoilingPoint} />
-                { /* <ElementModal />  <Header /> */ }
+                <ElementModal isOpen={this.state.isOpen} data={this.state.modalData} handleCloseModal={this.handleCloseModal} />
+                { /* <Header /> */ }
             </div>
         );
     }
