@@ -16,7 +16,8 @@ class PeriodicTable extends React.Component {
         hoveredData: {},
         boilingPoint: {},
         isOpen: false,
-        modalData: {}
+        modalData: {},
+        filter: []
     };
 
     handleModal = (e) => {
@@ -56,6 +57,19 @@ class PeriodicTable extends React.Component {
         this.setState( () => ({ hoveredData: data }) );
     }
 
+    handleFilter = (e) => {
+        const targetContent = e.target.textContent.toLowerCase();
+        if( e.target.classList.contains('types__box__inner--checked') ){
+            e.target.classList.remove('types__box__inner--checked')
+            const tempState = this.state.filter;
+            tempState.splice(tempState.indexOf(targetContent), 1 );
+            this.setState( () => ({ filter: tempState }) ) ;
+        }else{
+            e.target.classList.add('types__box__inner--checked')
+            this.setState( (prev) => ({ filter: prev.filter.concat(targetContent) }) ) ;
+        }
+    }
+
     handleBoilingPoint = (e) => {
         this.setState( () => ({boilingPoint:e}) );
         const elements = document.querySelectorAll('[data-boil]');
@@ -78,7 +92,7 @@ class PeriodicTable extends React.Component {
                     handleModal={this.handleModal}
                 />
                 <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
-                <ElementTypeBox types={this.state.types}/>
+                <ElementTypeBox types={this.state.types} handleFilter={this.handleFilter}/>
                 <ElementCategoryBox categories={this.state.categories} />    
                 <TemperatureSlider handleBoilingPoint={this.handleBoilingPoint} />
                 <ElementModal isOpen={this.state.isOpen} data={this.state.modalData} handleCloseModal={this.handleCloseModal} />
