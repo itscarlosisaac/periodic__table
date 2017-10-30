@@ -8,6 +8,7 @@
     box-sizing: border-box;
     color: $c-dark-blue;
     &.diatomic_nonmetal,
+    &.nonmetal,
     &.polyatomic_nonmetal {
         background: $c-nonmetal;
     }

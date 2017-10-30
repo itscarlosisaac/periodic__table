@@ -46,7 +46,8 @@ class PeriodicTable extends React.Component {
                 this.setState({
                     elements: result.data.elements,
                     types: phases,
-                    categories: categories
+                    categories: categories,
+                    hoveredData: result.data.elements[0]
             });
         })
     }

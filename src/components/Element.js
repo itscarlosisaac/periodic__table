@@ -6,7 +6,7 @@ class Element extends React.Component{
         this.props.handleHover({
                 "name": this.props.name,
                 "symbol": this.props.symbol,
-                "atomic_number": this.props.atomic_number,
+                "number": this.props.atomic_number,
                 "atomic_mass": this.props.atomic_mass,
                 "category": this.props.category.replace(/-| /g, '_')
             }
@@ -36,37 +36,3 @@ class Element extends React.Component{
 }
 
 export default Element;
-
-/* 
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class AddOption extends React.Component{
-    state = {
-        error: undefined
-    }
-
-    handleAddOption = (e) => {
-        e.preventDefault();
-        const option = e.target.elements.option.value.trim();
-        const error = this.props.handleAddOption(option);
-
-        this.setState( () => ({error: error}));
-        if( !error ) { e.target.elements.option.value = ""; }
-    }
-    
-    render(){
-        return(
-            <div>
-                {this.state.error && <p className="add-option-error">{this.state.error}</p>}
-                <form className="add-option" onSubmit={this.handleAddOption}>
-                    <input className="add-option__input" type="text" name="option"/>
-                    <button className="button">Add Option</button>
-                </form>
-                
-            </div>
-        );
-    }
-}
-
-export default AddOption; */
