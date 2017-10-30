@@ -17,7 +17,7 @@ class PeriodicTable extends React.Component {
         boilingPoint: {},
         isOpen: false,
         modalData: {},
-        filter: []
+        filtered: []
     };
 
     handleModal = (e) => {
@@ -58,15 +58,19 @@ class PeriodicTable extends React.Component {
     }
 
     handleFilter = (e) => {
-        const targetContent = e.target.textContent.toLowerCase();
-        if( e.target.classList.contains('types__box__inner--checked') ){
-            e.target.classList.remove('types__box__inner--checked')
-            const tempState = this.state.filter;
+        const targetContent = e.target.textContent.toLowerCase().trim().replace(/[ -]/g, '_');
+        if( !e.target.classList.contains('category--checked') ){
+            e.target.classList.add('category--checked')
+            this.setState( (prev) => ({ filtered: prev.filtered.concat(targetContent) }) ) ;
+            let tempElements = this.state.filtered.filter( (cat) => {
+                return document.querySelectorAll(`.elements .element:not(.${cat})`)
+            });
+        }
+        else{
+            e.target.classList.remove('category--checked')
+            const tempState = this.state.filtered;
             tempState.splice(tempState.indexOf(targetContent), 1 );
-            this.setState( () => ({ filter: tempState }) ) ;
-        }else{
-            e.target.classList.add('types__box__inner--checked')
-            this.setState( (prev) => ({ filter: prev.filter.concat(targetContent) }) ) ;
+            this.setState( () => ({ filtered: tempState }) ) ;
         }
     }
 
@@ -92,8 +96,8 @@ class PeriodicTable extends React.Component {
                     handleModal={this.handleModal}
                 />
                 <ElementInfoBox hoveredData={this.state.hoveredData} hovered={this.handleHover} />
-                <ElementTypeBox types={this.state.types} handleFilter={this.handleFilter}/>
-                <ElementCategoryBox categories={this.state.categories} />    
+                <ElementTypeBox types={this.state.types} />
+                <ElementCategoryBox categories={this.state.categories} handleFilter={this.handleFilter} />    
                 <TemperatureSlider handleBoilingPoint={this.handleBoilingPoint} />
                 <ElementModal isOpen={this.state.isOpen} data={this.state.modalData} handleCloseModal={this.handleCloseModal} />
                 { /* <Header /> */ }

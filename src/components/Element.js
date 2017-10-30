@@ -13,10 +13,25 @@ class Element extends React.Component{
         );
     }
     render(){
-        var position = {
+        const styleSheet = document.styleSheets[0];
+        const keyframes =
+        `@-webkit-keyframes ElementAnim {
+            0% {-webkit-transform:scale(0)} 
+            100% {-webkit-transform:scale(1)}
+        }`;
+        styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+        const position = {
             left:  (this.props.xpos * 72) - 72,
-            top:  (this.props.ypos * 72) - 72
-          };
+            top:  (this.props.ypos * 72) - 72,
+            animationName: "ElementAnim",
+            animationDelay: `${Math.random() * 1}s`,
+            animationIterationCount: 1,
+            animationDirection: 'normal',
+            animationFillMode: 'forwards',
+            animationTimingFunction: 'ease-in-out',
+            animationDuration: '0.6s',
+            opacity:1
+        };
         return(
             <div
                 style={position}

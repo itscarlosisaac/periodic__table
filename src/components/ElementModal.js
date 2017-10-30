@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 
 class ElementModal extends React.Component{
     render(){
-        console.log(this.props)
         return (
             <Modal 
                 isOpen={this.props.isOpen}

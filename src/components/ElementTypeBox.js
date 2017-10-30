@@ -8,7 +8,6 @@ class ElementTypeBox extends React.Component{
                         return (
                             <div 
                                 key={type.toLowerCase()} 
-                                onClick={this.props.handleFilter}
                                 className={type.toLowerCase() + " types__box__title"} >
                               <span className="types__box__inner"><span className="types__box__inner-checked"></span></span>
                               {type}

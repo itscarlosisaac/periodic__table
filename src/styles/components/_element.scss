@@ -16,6 +16,8 @@
     position: absolute;
     padding: .3rem;
     transition: all 200ms ease-in-out;
+    transform:scale(0);
+    opacity: 0;
     width: 72px;
     &[class*="unknown"]:hover,
     &:hover{  

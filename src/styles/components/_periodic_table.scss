@@ -9,3 +9,9 @@
     width:calc(72px * 18);
     margin: 100px auto 0;
 }
+
+@media all and (max-width:1440px){
+    .periodic__table{
+        transform: scale(.8)
+    }
+}
