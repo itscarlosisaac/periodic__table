@@ -16,8 +16,8 @@ class Element extends React.Component{
         const styleSheet = document.styleSheets[0];
         const keyframes =
         `@-webkit-keyframes ElementAnim {
-            0% {-webkit-transform:scale(0)} 
-            100% {-webkit-transform:scale(1)}
+            0% {opacity:0} 
+            100% {opacity:1}
         }`;
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
         const position = {
@@ -30,7 +30,6 @@ class Element extends React.Component{
             animationFillMode: 'forwards',
             animationTimingFunction: 'ease-in-out',
             animationDuration: '0.6s',
-            opacity:1
         };
         return(
             <div
