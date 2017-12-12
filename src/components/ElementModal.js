@@ -13,7 +13,7 @@ class ElementModal extends React.Component{
                 className="element__modal"
             >
                 <article className="modal__box">
-                    <div className="close__modal"></div>
+                    <div className="close__modal" onClick={this.props.handleCloseModal}></div>
                     <header className="modal__header">
                         <div className="prev__element">
 

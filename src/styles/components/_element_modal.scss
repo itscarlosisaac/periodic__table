@@ -17,6 +17,7 @@
     height: auto;
     background: $c-dark-blue;
     color:#fff;
+    outline: none;
 }
 
 .ReactModal__Overlay--after-open{
@@ -30,7 +31,40 @@
     background: #fff;
     padding: 2rem;
     color:gray;
-    .close__modal{}
+    position: relative;
+    .close__modal{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: #838a90;
+        position: absolute;
+        right: 10px;
+        top:10px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        &:after,
+        &:before{
+            display: block;
+            content:'';
+            width: 2px;
+            height: 16px;
+            position: absolute;
+            left:0; top:0;bottom:0;right:0;
+            margin: auto;
+            background: $c-dark-blue;
+        }
+        &:after{
+            transform:rotate(45deg);
+            -moz-transform:rotate(45deg);
+            -webkit-transform:rotate(45deg);
+        }
+        &:before{
+            transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg);
+            -webkit-transform:rotate(-45deg);
+        }
+    }
     .modal__header{
         margin: -20px;
         padding: 20px;
@@ -41,6 +75,7 @@
         align-items: center;
         .prev__element,
         .next__element{
+            display: none;
             width: 80px;
             height: 80px;
             border:2px solid rgba(255,255,255,0.5);
@@ -120,15 +155,19 @@
                     span{
                         width: 80px;
                         height: 80px;
-                        line-height: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         text-align: center;
                         background: #f6f4f7;
                         border:1px solid #ddd;
                         box-shadow: inset 0 0 0 3px white;
                         border-radius: 100px;
-                        display: block;
                         color:#262a33;
                         font-size: 1.2rem;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        margin: 0 auto;
                     }
                 }
             }
