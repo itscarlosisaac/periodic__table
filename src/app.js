@@ -7,5 +7,3 @@ import axios from 'axios';
 
 const appRoot = document.getElementById('app');
 ReactDOM.render( <PeriodicTable />, appRoot );
-
-console.log("From App JS");

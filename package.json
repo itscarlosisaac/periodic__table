@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "w-serve": "webpack-dev-server"
+    "serve": "webpack-dev-server"
   },
   "dependencies": {
     "axios": "^0.17.0",
