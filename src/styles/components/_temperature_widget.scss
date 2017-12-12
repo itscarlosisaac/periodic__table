@@ -9,7 +9,7 @@
 
 .element__temperature__title{
     font-family: $fonti;
-    font-size: 1.95rem;
+    font-size: 1.4rem;
     color: #C0CDD1;
     letter-spacing: 0;
 }
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 input[type=range] {

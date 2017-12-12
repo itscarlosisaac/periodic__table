@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Fontin Sans Bold Italic';
+    src: url('/fonts/FontinSans-BoldItalic.woff2') format('woff2'),
+        url('/fonts/FontinSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fontin Sans Italic';
+    src: url('/fonts/FontinSans-Italic.woff2') format('woff2'),
+        url('/fonts/FontinSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fontin Sans Bold';
+    src: url('/fonts/FontinSans-Bold.woff2') format('woff2'),
+        url('/fonts/FontinSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontin Sans Rg';
+    src: url('/fonts/FontinSans-Regular.woff2') format('woff2'),
+        url('/fonts/FontinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontin Sans Sc';
+    src: url('/fonts/FontinSans-SmallCaps.woff2') format('woff2'),
+        url('/fonts/FontinSans-SmallCaps.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
