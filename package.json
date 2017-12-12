@@ -2,11 +2,16 @@
   "name": "periodic-table",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.5"
+  },
   "author": "Carlos Martinez <carlos.martinez@joystickinteractive.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "serve": "webpack-dev-server"
+    "build:prod": "webpack -p --env production",
+    "serve": "webpack-dev-server",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "axios": "^0.17.0",
